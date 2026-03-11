@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kabayan Tourism - Destinations</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Kabayan Tourism</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Main</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="history.html">History</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="destination.html">Destination</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero -->
+    <header class="bg-light text-center py-5">
+        <h1 class="display-4">Top Destinations in Kabayan</h1>
+        <p class="lead">Experience the beauty of nature and heritage.</p>
+    </header>
+    <!-- Destination Grid -->
+    <main class="container my-5">
+        <div class="row g-4">
+            <!-- Mount Tabayoc -->
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <img src="images/mt.tabayoc.webp" class="card-img-top img-fluid" alt="Mount Tabayoc">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Mount Tabayoc</h5>
+                        <p class="card-text">The second highest peak in Luzon, offering pristine forests and panoramic
+                            views.</p>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal"
+                            data-bs-target="#tabayocModal">View More</button>
+                    </div>
+                </div> 
+            </div>
+
+            <!-- Mount Pulag -->
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <img src="images/mt.pulag.jpg" class="card-img-top img-fluid" alt="Mount Pulag">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Mount Pulag</h5>
+                        <p class="card-text">Known as the "Playground of the Gods," famous for its sea of clouds.</p>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#pulagModal">View
+                            More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kabayan Fire Mummies -->
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <img src="images/mummies.jpg" class="card-img-top img-fluid" alt="Kabayan Fire Mummies">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Kabayan Fire Mummies</h5>
+                        <p class="card-text">Ancient burial caves preserving cultural heritage through unique
+                            mummification.</p>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal"
+                            data-bs-target="#mummiesModal">View More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Four Lakes Card -->
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <img src="images/lakes.jpg" class="card-img-top img-fluid" alt="Kabayan Lakes">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Four Lakes of Kabayan</h5>
+                        <p class="card-text">Discover Bulalacao, Latepngap, Inmulung, and Tabeyo Lakes.</p>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#lakesModal">View
+                            More</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Tinongchol Burial Cave -->
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <img src="images/b.rock.jpg" class="card-img-top img-fluid" alt="Tinongchol Burial Cave">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Tinongchol Burial Rock</h5>
+                        <p class="card-text">A sacred site with coffins carved from pinewood, reflecting ancient
+                            traditions.</p>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal"
+                            data-bs-target="#tinongcholModal">View More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Opdas Burial Cave -->
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <img src="images/bones.jpg" class="card-img-top img-fluid" alt="Opdas Burial Cave">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Opdas Burial Cave</h5>
+                        <p class="card-text">A cave housing centuries-old skeletal remains, offering a glimpse into
+                            Kabayan’s past.</p>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#opdasModal">View
+                            More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Mount Tabayoc Modal -->
+    <div class="modal fade" id="tabayocModal" tabindex="-1" aria-labelledby="tabayocModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tabayocModalLabel">Mount Tabayoc</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="tabayocCarousel" class="carousel slide mb-3" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img src="images/mt.tabayoc_3.jpg" class="d-block w-100"
+                                    alt="Mount Tabayoc"></div>
+                            <div class="carousel-item"><img src="images/mt.tabayoc_2.jpg" class="d-block w-100"
+                                    alt="Mount Tabayoc Forest"></div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#tabayocCarousel"
+                            data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#tabayocCarousel"
+                            data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+                    </div>
+                    <p>Mount Tabayoc is Luzon’s second highest peak, surrounded by pristine mossy forests and offering
+                        panoramic views of the Cordillera mountains.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mount Pulag Modal -->
+    <div class="modal fade" id="pulagModal" tabindex="-1" aria-labelledby="pulagModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pulagModalLabel">Mount Pulag</h5><button type="button" class="btn-close"
+                        data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="pulagCarousel" class="carousel slide mb-3" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img src="images/sunrise.jpg" class="d-block w-100"
+                                    alt="Mount Pulag"></div>
+                            <div class="carousel-item"><img src="images/mt.pulag_1.jpg" class="d-block w-100"
+                                    alt="Pulag Sunrise"></div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#pulagCarousel"
+                            data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#pulagCarousel"
+                            data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+                    </div>
+                    <p>Mount Pulag is the highest peak in Luzon, famous for its “sea of clouds” and diverse ecosystems.
+                        A UNESCO heritage candidate and trekking favorite.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kabayan Fire Mummies Modal -->
+    <div class="modal fade" id="mummiesModal" tabindex="-1" aria-labelledby="mummiesModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mummiesModalLabel">Kabayan Fire Mummies</h5><button type="button"
+                        class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="mummiesCarousel" class="carousel slide mb-3" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img src="images/fire-mummies.jpg" class="d-block w-100"
+                                    alt="Kabayan Fire Mummies"></div>
+                            <div class="carousel-item"><img src="images/fire-mummies2.jpg" class="d-block w-100"
+                                    alt="Burial Cave"></div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#mummiesCarousel"
+                            data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#mummiesCarousel"
+                            data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+                    </div>
+                    <p>The Kabayan Fire Mummies are preserved through a unique smoking process. These burial caves are a
+                        National Cultural Treasure.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Four Lakes Modal -->
+    <div class="modal fade" id="lakesModal" tabindex="-1" aria-labelledby="lakesModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="lakesModalLabel">Four Lakes of Kabayan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Lake Bulalacao -->
+                    <h6>Lake Bulalacao</h6>
+                    <img src="images/lake-bulalacao.jpg" class="img-fluid mb-2" alt="Lake Bulalacao">
+                    <p>A serene mountain lake surrounded by lush forests, perfect for eco-tourism and birdwatching.</p>
+
+                    <!-- Lake Latepngap -->
+                    <h6>Lake Latepngap</h6>
+                    <img src="images/lake-latepngap.jpg" class="img-fluid mb-2" alt="Lake Latepngap">
+                    <p>Known for its tranquil waters and scenic mountain backdrop, ideal for quiet reflection.</p>
+
+                    <!-- Lake Inmulung -->
+                    <h6>Lake Inmulung</h6>
+                    <img src="images/lake-inmulung.jpg" class="img-fluid mb-2" alt="Lake Inmulung">
+                    <p>A hidden gem nestled in Kabayan’s highlands, offering pristine natural beauty.</p>
+
+                    <!-- Lake Tabeyo -->
+                    <h6>Lake Tabeyo</h6>
+                    <img src="images/lake-tabeyo.jpg" class="img-fluid mb-2" alt="Lake Tabeyo">
+                    <p>The largest of Kabayan’s lakes, often used for local fishing and community gatherings.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tinongchol Burial Cave Modal -->
+    <div class="modal fade" id="tinongcholModal" tabindex="-1" aria-labelledby="tinongcholModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tinongcholModalLabel">Tinongchol Burial Cave</h5><button type="button"
+                        class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="tinongcholCarousel" class="carousel slide mb-3" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img src="images/tinongchol-cave.jpg"
+                                    class="d-block w-100" alt="Tinongchol Burial Cave"></div>
+                            <div class="carousel-item"><img src="images/tinongchol-cave2.jpg" class="d-block w-100"
+                                    alt="Tinongchol Coffins"></div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#tinongcholCarousel"
+                            data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#tinongcholCarousel"
+                            data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+                    </div>
+                    <p>Tinongchol Burial Cave contains coffins carved from pinewood, reflecting ancient burial
+                        traditions of Kabayan.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Opdas Burial Cave Modal -->
+    <div class="modal fade" id="opdasModal" tabindex="-1" aria-labelledby="opdasModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="opdasModalLabel">Opdas Burial Cave</h5><button type="button"
+                        class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="opdasCarousel" class="carousel slide mb-3" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img src="images/opdas-cave.jpg" class="d-block w-100"
+                                    alt="Opdas Burial Cave"></div>
+                            <div class="carousel-item"><img src="images/opdas-cave2.jpg" class="d-block w-100"
+                                    alt="Opdas Burial Cave"></div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#opdasCarousel"
+                            data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#opdasCarousel"
+                            data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+                    </div>
+                    <p>Tinongchol Burial Cave contains coffins carved from pinewood, reflecting ancient burial
+                        traditions of Kabayan.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Controls-->
+    <button class="carousel-control-prev" type="button" data-bs-target="#destinationCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#destinationCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2026 Kabayan Tourism Board</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
