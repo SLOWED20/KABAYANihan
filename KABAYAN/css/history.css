@@ -1,0 +1,121 @@
+/* Hero section with parallax and gradient overlays */
+.history-hero {
+  background: url('../images/mt-pulag-sunrise.jpg') center center / cover no-repeat fixed;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Rice terraces overlay blend */
+.history-hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('../images/kabayan-rice-terraces.jpg') center center / cover no-repeat fixed;
+  mix-blend-mode: overlay;
+  opacity: 0.35;
+  z-index: -2;
+}
+
+/* Animated gradient overlay (day cycle) */
+.history-hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(120deg,
+    rgba(255, 140, 0, 0.4),   /* dawn orange */
+    rgba(255, 215, 0, 0.3),   /* daylight gold */
+    rgba(135, 206, 250, 0.3), /* sky blue */
+    rgba(25, 25, 112, 0.4),   /* night navy */
+    rgba(72, 61, 139, 0.4));  /* twilight purple */
+  background-size: 300% 300%;
+  animation: gradientCycle 30s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientCycle {
+  0%   { background-position: 0% 50%; }
+  25%  { background-position: 50% 50%; }
+  50%  { background-position: 100% 50%; }
+  75%  { background-position: 50% 100%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Timeline cards */
+.card {
+  border: none;
+  opacity: 0;
+  transition: all 0.6s ease-out;
+}
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card.left {
+  transform: translateX(-60px);
+}
+.card.right {
+  transform: translateX(60px);
+}
+.card.left.visible,
+.card.right.visible {
+  transform: translateX(0);
+}
+.card:nth-child(1).visible { transition-delay: 0.1s; }
+.card:nth-child(2).visible { transition-delay: 0.2s; }
+.card:nth-child(3).visible { transition-delay: 0.3s; }
+.card:nth-child(4).visible { transition-delay: 0.4s; }
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Stars */
+.stars {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  animation: twinkle 3s infinite;
+}
+@keyframes twinkle {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Shooting star */
+.shooting-star {
+  position: absolute;
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(white, transparent);
+  opacity: 0;
+  transform: rotate(45deg);
+  animation: shoot 2s ease forwards;
+}
+@keyframes shoot {
+  0% { opacity: 1; transform: translate(0, 0) rotate(45deg); }
+  100% { opacity: 0; transform: translate(-200px, 200px) rotate(45deg); }
+}
+
+/* Hero text animation */
+.history-hero h1, .history-hero p {
+  animation: fadeInDown 1s ease-out;
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}

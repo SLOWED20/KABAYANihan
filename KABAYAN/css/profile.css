@@ -1,0 +1,135 @@
+/* Page-specific styles for profile.html */
+
+/* Page-load fade-in */
+body {
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+/* Hero section with animated gradient */
+.profile-hero {
+  background: linear-gradient(-45deg, #004e92, #000428, #1a2a6c, #b21f1f);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: #fff;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform 1.2s ease, opacity 1.2s ease;
+  will-change: transform, opacity;
+}
+.profile-hero.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Hero text floating + glow */
+.profile-hero h1, 
+.profile-hero p {
+  animation: floatText 4s ease-in-out infinite;
+  animation-play-state: paused;
+  transition: text-shadow 0.4s ease, color 0.4s ease;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  will-change: transform;
+}
+.profile-hero h1:hover, 
+.profile-hero p:hover {
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8),
+               0 0 20px rgba(255, 215, 0, 0.6),
+               0 0 30px rgba(255, 215, 0, 0.4);
+}
+/* Ripple glow trail */
+.profile-hero h1::after, 
+.profile-hero p::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 215, 0, 0.4);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.profile-hero h1:hover::after, 
+.profile-hero p:hover::after {
+  animation: rippleGlow 1.5s ease-out;
+}
+
+/* Search box */
+.search-box {
+  max-width: 500px;
+  margin: auto;
+  transition: transform 0.3s ease;
+}
+.search-box:hover {
+  transform: scale(1.05);
+}
+
+/* Cards */
+.card {
+  border: none;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: transform, opacity;
+}
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.card-title {
+  font-weight: 600;
+}
+
+/* Footer */
+footer {
+  background: #000428;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes floatText {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+@keyframes rippleGlow {
+  0%   { width: 0; height: 0; opacity: 0.8; }
+  50%  { width: 120%; height: 120%; opacity: 0.4; }
+  100% { width: 200%; height: 200%; opacity: 0; }
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 rgba(0,123,255,0.7); }
+  50% { box-shadow: 0 0 15px rgba(0,123,255,0.9); }
+  100% { box-shadow: 0 0 0 rgba(0,123,255,0.7); }
+}
+
+/* Accessibility: reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Mobile: disable hover glow */
+@media (hover: none) {
+  .profile-hero h1:hover,
+  .profile-hero p:hover {
+    color: inherit;
+    text-shadow: none;
+  }
+}

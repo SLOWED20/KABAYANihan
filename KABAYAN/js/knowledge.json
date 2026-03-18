@@ -1,0 +1,27 @@
+{
+  "faqs": {
+    "how do i get to kabayan": "Kabayan can be reached via bus or private vehicle from Baguio City, with scenic routes through Benguet.",
+    "best time to visit": "The best time to visit Kabayan is during the dry season (November to April).",
+    "top attractions": "Popular attractions include Mount Pulag, Kabayan Fire Mummies, and Lake Bulalacao."
+  },
+  "destinations": {
+    "mount pulag": "Mount Pulag is Luzon’s highest peak, famous for its sea of clouds and diverse ecosystems.",
+    "mount tabayoc": "Mount Tabayoc is Luzon’s second highest peak, surrounded by mossy forests and panoramic views.",
+    "timbak caves": "Timbak Caves are sacred burial sites, part of Kabayan’s UNESCO tentative list.",
+    "four lakes": "Kabayan’s Four Lakes — Bulalacao, Latepngap, Inmulung, and Tabeyo — each offer unique natural beauty.",
+    "tinongchol": "Tinongchol Burial Rock features coffins carved from pinewood, reflecting ancient traditions.",
+    "opdas": "Opdas Burial Cave houses centuries-old skeletal remains, offering a glimpse into Kabayan’s past."
+  },
+  "history": {
+    "fire mummies": "Kabayan is renowned for its fire mummies, an ancient burial practice unique to the Ibaloi people.",
+    "pre-colonial": "Kabayan’s indigenous communities developed unique burial practices before the 1500s.",
+    "spanish period": "Spanish colonization introduced Christianity and governance, while Kabayan preserved traditions.",
+    "american era": "Educational reforms and infrastructure projects shaped Kabayan’s modern identity.",
+    "contemporary": "Today, Kabayan balances heritage preservation with sustainable tourism."
+  },
+  "admin": {
+    "add announcement": "Go to Admin Panel → Announcements, type your message, and click 'Add Announcement'.",
+    "add faq": "Open Admin Panel → FAQs, enter the question and answer, then click 'Add FAQ'.",
+    "logout": "Click 'Logout' in the Admin Panel navbar to clear your session."
+  }
+}

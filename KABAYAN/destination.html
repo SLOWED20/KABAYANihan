@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kabayan Tourism - Destinations</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">KABAYANihan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Main</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="service.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="history.html">History</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="destination.html">Destination</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<header class="destinations-hero text-center py-5">
+  <h1 class="display-4">Top Destinations in Kabayan</h1>
+  <p class="lead">Experience the beauty of nature and heritage.</p>
+  <div class="search-box bg-light p-3 rounded shadow mt-3 text-center">
+    <form class="d-flex justify-content-center" onsubmit="return false;">
+      <input type="text" id="searchInput" class="form-control me-2" placeholder="Search destinations...">
+      <button class="btn btn-primary" type="button">Search</button>
+    </form>
+    <p id="noResults" class="text-danger mt-2" style="display:none;">No results found.</p>
+  </div>
+</header>
+
+
+    <!-- Destination Grid -->
+    <main class="container my-5">
+        <div class="row g-4">
+
+            <!-- Mount Tabayoc -->
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <video class="card-img-top w-100" style="height:300px;object-fit:cover;" controls>
+                        <source src="videos/mt.tabayoc.mp4" type="video/mp4">
+                    </video>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Mount Tabayoc</h5>
+                        <p class="card-text">The second highest peak in Luzon, offering pristine forests and panoramic
+                            views.</p>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal"
+                            data-bs-target="#tabayocModal">View More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mount Pulag -->
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <video class="card-img-top w-100" style="height:300px;object-fit:cover;" controls>
+                        <source src="videos/mt.pulag.mp4" type="video/mp4">
+                    </video>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Mount Pulag</h5>
+                        <p class="card-text">Known as the "Playground of the Gods," famous for its sea of clouds.</p>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#pulagModal">View
+                            More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timbak Caves -->
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <video class="card-img-top w-100" style="height:300px;object-fit:cover;" controls>
+                        <source src="videos/timbak-caves.mp4" type="video/mp4">
+                    </video>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Timbak Caves</h5>
+                        <p class="card-text">Ancient burial caves preserving cultural heritage through unique
+                            traditions.</p>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal"
+                            data-bs-target="#timbakModal">View More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Four Lakes -->
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <video class="card-img-top w-100" style="height:300px;object-fit:cover;" controls>
+                        <source src="videos/lakes.mp4" type="video/mp4">
+                    </video>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Four Lakes of Kabayan</h5>
+                        <p class="card-text">Discover Bulalacao, Latepngap, Inmulung, and Tabeyo Lakes.</p>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#lakesModal">View
+                            More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tinongchol Burial Cave -->
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <video class="card-img-top w-100" style="height:300px;object-fit:cover;" controls>
+                        <source src="videos/tinongchol.mp4" type="video/mp4">
+                    </video>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Tinongchol Burial Rock</h5>
+                        <p class="card-text">A sacred site with coffins carved from pinewood, reflecting ancient
+                            traditions.</p>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal"
+                            data-bs-target="#tinongcholModal">View More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Opdas Burial Cave -->
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <video class="card-img-top w-100" style="height:300px;object-fit:cover;" controls>
+                        <source src="videos/opdas.mp4" type="video/mp4">
+                    </video>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Opdas Burial Cave</h5>
+                        <p class="card-text">A cave housing centuries-old skeletal remains, offering a glimpse into
+                            Kabayan’s past.</p>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#opdasModal">View
+                            More</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Modals -->
+    <!-- Mount Tabayoc -->
+    <div class="modal fade" id="tabayocModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">Mount Tabayoc</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>About:</strong> Luzon’s second highest peak, surrounded by mossy forests and offering
+                        panoramic Cordillera views. A quieter alternative to Pulag for trekkers.</p>
+                    <p><strong>Coordinator:</strong> <a href="#">Kabayan Tourism Office</a></p>
+                    <p><strong>Homestay Options:</strong> <a href="#">Tabayoc Eco Homestay</a> | <a href="#">Cordillera
+                            Lodge</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mount Pulag -->
+    <div class="modal fade" id="pulagModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">Mount Pulag</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>About:</strong> The highest peak in Luzon, famous for its “sea of clouds” and diverse
+                        ecosystems. A UNESCO heritage candidate and trekking favorite.</p>
+                    <p><strong>Coordinator:</strong> <a href="#">Mount Pulag Park Management</a></p>
+                    <p><strong>Homestay Options:</strong> <a href="#">Pulag Base Homestay</a> | <a href="#">Kabayan
+                            Guesthouse</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Timbak Caves -->
+    <div class="modal fade" id="timbakModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">Timbak Caves</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>About:</strong> Sacred burial caves in Kabayan, known for their cultural significance and
+                        ancient traditions. Part of the UNESCO tentative list.</p>
+                    <p><strong>Coordinator:</strong> <a href="#">Kabayan Tourism Coordinator</a></p>
+                    <p><strong>Homestay Options:</strong> <a href="#">Timbak Village Homestay</a> | <a
+                            href="#">Cordillera Guesthouse</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Four Lakes -->
+    <div class="modal fade" id="lakesModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">Four Lakes of Kabayan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>About:</strong> Kabayan’s four lakes — Bulalacao, Latepngap, Inmulung, and Tabeyo — each
+                        offer unique natural beauty, from birdwatching to fishing and community gatherings.</p>
+                    <p><strong>Coordinator:</strong> <a href="#">Kabayan Eco-Tourism Office</a></p>
+                    <p><strong>Homestay Options:</strong> <a href="#">Lake Tabeyo Homestay</a> | <a href="#">Bulalacao
+                            Eco-Lodge</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tinongchol Burial Cave -->
+    <div class="modal fade" id="tinongcholModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">Tinongchol Burial Cave</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>About:</strong> Coffins carved from pinewood, reflecting ancient burial traditions of
+                        Kabayan. A sacred heritage site.</p>
+                    <p><strong>Coordinator:</strong> <a href="#">Kabayan Heritage Office</a></p>
+                    <p><strong>Homestay Options:</strong> <a href="#">Tinongchol Homestay</a> | <a href="#">Kabayan
+                            Cultural Lodge</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Opdas Burial Cave -->
+    <div class="modal fade" id="opdasModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">Opdas Burial Cave</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>About:</strong> A cave housing centuries-old skeletal remains, offering a glimpse into
+                        Kabayan’s past and its burial customs.</p>
+                    <p><strong>Coordinator:</strong> <a href="#">Kabayan Cultural Coordinator</a></p>
+                    <p><strong>Homestay Options:</strong> <a href="#">Opdas Village Homestay</a> | <a
+                            href="#">Cordillera Heritage Lodge</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+      <!-- Analytics Section -->
+  <section id="analytics" class="container my-5">
+    <h2 class="mb-4">Mount Pulag Tourist Foot Traffic</h2>
+    <p>Here’s a simple chart showing monthly visitor numbers:</p>
+    <canvas id="footTrafficChart" height="120"></canvas>
+    <button id="downloadCSV" class="btn btn-outline-primary mt-3">⬇️ Download Data (CSV)</button>
+    <button id="downloadPDF" class="btn btn-outline-danger mt-3">📄 Export Chart (PDF)</button>
+  </section>
+
+  <!-- Chart.js + Plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.4.0"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="js/analytics.js"></script>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2026 Kabayan Tourism Board</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+/* General body styling */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Role badge */
+#roleBadge {
+  font-size: 0.9rem;
+  padding: 0.4em 0.8em;
+  border-radius: 0.5rem;
+}
+
+/* Cards */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Section headings */
+section h2 {
+  border-left: 5px solid #0d6efd;
+  padding-left: 10px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Forms */
+form .form-control {
+  border-radius: 0.4rem;
+  border: 1px solid #ced4da;
+}
+form button {
+  border-radius: 0.4rem;
+}
+
+/* Lists */
+.list-group-item {
+  font-size: 0.95rem;
+  padding: 0.6rem 1rem;
+}
+
+/* Footer */
+footer {
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+/* === Role-based accents === */
+
+/* Super Admin theme */
+.super-theme h2,
+.super-theme .card-title {
+  color: #d39e00; /* gold accent */
+}
+.super-theme .btn {
+  background-color: #ffc107;
+  border: none;
+  color: #212529;
+}
+
+/* Senior Admin theme */
+.senior-theme h2,
+.senior-theme .card-title {
+  color: #0d6efd; /* blue accent */
+}
+.senior-theme .btn {
+  background-color: #0d6efd;
+  border: none;
+  color: #fff;
+}
+
+/* Junior Admin theme */
+.junior-theme h2,
+.junior-theme .card-title {
+  color: #198754; /* green accent */
+}
+.junior-theme .btn {
+  background-color: #198754;
+  border: none;
+  color: #fff;
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kabayan Tourism - Homepage</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/kabayan-home.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">KABAYANihan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="login.html">Admin</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="service.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="history.html">History</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="destination.html">Destination</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Video Section -->
+    <header class="video-hero position-relative text-center">
+        <video id="homepageVideo" autoplay muted loop poster="images/video-thumbnail.jpg">
+            <source src="videos/vd.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <!-- Circular Play Button -->
+        <button id="playButton" class="play-btn">▶</button>
+        <!-- Hero Text Overlay -->
+        <div class="content text-white position-absolute top-50 start-50 translate-middle">
+            <h1 class="display-3 fw-bold">Welcome to Kabayan</h1>
+            <p class="lead">"Home of the Century Old Mummies"</p>
+            <!-- Search Bar -->
+            <div class="search-box bg-light p-3 rounded shadow mt-3">
+                <form class="d-flex" onsubmit="return false;">
+                    <input type="text" id="searchInput" class="form-control me-2" placeholder="Search site content...">
+                    <button class="btn btn-primary" type="button">Search</button>
+                </form>
+                <p id="noResults" class="text-danger mt-2" style="display:none;">No results found.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Announcements Section -->
+    <section id="announcements" class="container my-5 fade-in">
+        <h2 class="text-center mb-4">Latest Announcements</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card shadow mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Community Festival 2026</h5>
+                        <p class="card-text">Join us for Kabayan’s annual cultural festival this April, featuring
+                            traditional dances, local cuisine, and heritage tours.</p>
+                        <small class="text-muted">Posted on March 10, 2026</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card shadow mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Mount Pulag Trek Advisory</h5>
+                        <p class="card-text">Due to weather conditions, trekking schedules are adjusted. Please check
+                            with the Tourism Office for updates.</p>
+                        <small class="text-muted">Posted on March 8, 2026</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brief History Section -->
+    <section id="history" class="container my-5 fade-in">
+        <h2 class="text-center mb-4">A Brief History of Kabayan, Benguet</h2>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <p>Kabayan is renowned for its centuries-old fire mummies, an ancient burial practice unique to the
+                    Ibaloi people. These burial caves are recognized as National Cultural Treasures, preserving the
+                    heritage of the Cordillera region.</p>
+                <p>Beyond its cultural legacy, Kabayan is home to Mount Pulag, the highest peak in Luzon, famous for its
+                    “sea of clouds.” Today, Kabayan balances heritage preservation with sustainable tourism and
+                    community development.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="images/bg_2.jpg" class="img-fluid rounded shadow" alt="Kabayan heritage">
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="container my-5 fade-in">
+        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faq1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse1">
+                        How do I reach Kabayan?
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Kabayan can be reached via Baguio City through bus or private vehicle, with scenic routes across
+                        Benguet.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faq2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse2">
+                        What is Kabayan famous for?
+                    </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Kabayan is best known for its fire mummies, burial caves, and Mount Pulag’s “sea of clouds.”
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destination Section -->
+    <section id="destination" class="container my-5 fade-in">
+        <h2 class="text-center mb-4">Top Destinations</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card shadow mb-3">
+                    <video class="card-img-top" controls>
+                        <source src="videos/mt.tabayoc.mp4" type="video/mp4">
+                    </video>
+                    <div class="card-body">
+                        <h5 class="card-title">Mount Tabayoc</h5>
+                        <p class="card-text">A majestic peak offering panoramic views of Kabayan’s landscapes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow mb-3">
+                    <video class="card-img-top" controls>
+                        <source src="videos/mt.pulag.mp4" type="video/mp4">
+                    </video>
+                    <div class="card-body">
+                        <h5 class="card-title">Mount Pulag</h5>
+                        <p class="card-text">The highest peak in Luzon, famous for its sea of clouds.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="copilotTrigger" class="copilot-trigger">🤖</div>
+
+    <div id="copilotChat" class="copilot-chat">
+        <div class="chat-header">
+            Copilot Assistant
+            <button id="minimizeBtn" class="minimize-btn">−</button>
+            <button id="soundToggle" class="sound-btn">🔊</button>
+        </div>
+
+        <div class="chat-body" id="chatBody">
+            <p><strong>Copilot:</strong> Hi! Ask me about Kabayan, Benguet.</p>
+        </div>
+
+        <div class="chat-footer">
+            <!-- Quick Links -->
+            <div class="quick-links" id="quickLinks">
+                <button class="quick-btn" data-topic="pulag">⛰️ Mount Pulag</button>
+                <button class="quick-btn" data-topic="mummies">🪨 Fire Mummies</button>
+                <button class="quick-btn" data-topic="foodspots">🍲 Local Food Spots</button>
+            </div>
+
+            <!-- FAQ Menu -->
+            <div class="faq-menu" id="faqMenu">
+                <button class="faq-btn" data-topic="tourism">Tourism</button>
+                <button class="faq-btn" data-topic="culture">Culture</button>
+                <button class="faq-btn" data-topic="food">Food</button>
+                <button class="faq-btn" data-topic="festival">Festivals</button>
+                <button class="faq-btn" data-topic="lodging">Lodging</button>
+                <button class="faq-btn" data-topic="travel">Travel Tips</button>
+                <button class="faq-btn" data-topic="season">Best Time</button>
+            </div>
+
+            <!-- Back Button -->
+            <button id="backBtn" class="back-btn" style="display:none;">⬅ Back to Menu</button>
+        </div>
+
+        <!-- Audio -->
+        <audio id="expandSound" src="sounds/expand.mp3" preload="auto"></audio>
+        <audio id="collapseSound" src="sounds/collapse.mp3" preload="auto"></audio>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 fade-in">
+        <p>&copy; 2026 Kabayan Tourism Board</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/kabayan-home.bundle.js"></script>
+</body>
+
+</html>
