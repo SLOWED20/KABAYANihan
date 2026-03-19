@@ -8,13 +8,6 @@
   <link rel="stylesheet" href="css/admin.css">
 </head>
 <body>
-  <script>
-    // Redirect if not logged in
-    if (localStorage.getItem("isLoggedIn") !== "true") {
-      window.location.href = "login.html";
-    }
-  </script>
-
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
@@ -26,70 +19,58 @@
     </div>
   </nav>
 
-  <!-- Dashboard Content -->
-  <div class="container my-5">
-    <h1 class="mb-4">Welcome, <span id="adminName"></span></h1>
+  <!-- Tabs -->
+  <ul class="nav nav-tabs" id="adminTabs" role="tablist">
+    <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#faqs">FAQs</button></li>
+    <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#announcements">Announcements</button></li>
+    <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#destinations">Destinations</button></li>
+    <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#services">Services</button></li>
+  </ul>
 
+  <!-- Tab Content -->
+  <div class="tab-content mt-3">
     <!-- FAQs -->
-    <section class="my-5">
+    <div class="tab-pane fade show active" id="faqs">
       <h2>Manage FAQs</h2>
-      <form id="faqForm">
-        <div class="mb-3">
-          <label for="faqQuestion" class="form-label">Question</label>
-          <input type="text" id="faqQuestion" class="form-control">
-        </div>
-        <div class="mb-3">
-          <label for="faqAnswer" class="form-label">Answer</label>
-          <textarea id="faqAnswer" class="form-control"></textarea>
-        </div>
+      <form id="faqForm" class="mb-3">
+        <input type="text" id="faqQuestion" class="form-control mb-2" placeholder="Enter question">
+        <textarea id="faqAnswer" class="form-control mb-2" placeholder="Enter answer"></textarea>
         <button type="submit" class="btn btn-success">Add FAQ</button>
       </form>
-      <ul id="faqList" class="list-group mt-3"></ul>
-    </section>
+      <ul id="faqList" class="list-group"></ul>
+    </div>
 
     <!-- Announcements -->
-    <section class="my-5">
+    <div class="tab-pane fade" id="announcements">
       <h2>Manage Announcements</h2>
-      <form id="announcementForm">
-        <div class="mb-3">
-          <label for="announcementText" class="form-label">Announcement</label>
-          <textarea id="announcementText" class="form-control"></textarea>
-        </div>
+      <form id="announcementForm" class="mb-3">
+        <textarea id="announcementText" class="form-control mb-2" placeholder="Enter announcement"></textarea>
         <button type="submit" class="btn btn-primary">Add Announcement</button>
       </form>
-      <ul id="announcementList" class="list-group mt-3"></ul>
-    </section>
+      <ul id="announcementList" class="list-group"></ul>
+    </div>
 
-    <!-- Admin Hierarchy -->
-    <section class="my-5">
-      <h2>Admin Hierarchy</h2>
-      <div class="row">
-        <div class="col-md-12 mb-4">
-          <div class="card shadow text-center border-warning">
-            <div class="card-body">
-              <h4 class="card-title text-warning">Super Admin</h4>
-              <p class="card-text">Maria Santos – Full system control</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 mb-4">
-          <div class="card shadow text-center border-primary">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Senior Admin</h5>
-              <p class="card-text">Juan Dela Cruz – Content & announcements</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 mb-4">
-          <div class="card shadow text-center border-success">
-            <div class="card-body">
-              <h5 class="card-title text-success">Junior Admin</h5>
-              <p class="card-text">Angela Reyes – FAQs & user support</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Destinations -->
+    <div class="tab-pane fade" id="destinations">
+      <h2>Manage Destinations</h2>
+      <form id="destinationForm" class="mb-3">
+        <input type="text" id="destinationName" class="form-control mb-2" placeholder="Destination name">
+        <textarea id="destinationDesc" class="form-control mb-2" placeholder="Description"></textarea>
+        <button type="submit" class="btn btn-info">Add Destination</button>
+      </form>
+      <ul id="destinationList" class="list-group"></ul>
+    </div>
+
+    <!-- Services -->
+    <div class="tab-pane fade" id="services">
+      <h2>Manage Services</h2>
+      <form id="serviceForm" class="mb-3">
+        <input type="text" id="serviceName" class="form-control mb-2" placeholder="Service name">
+        <textarea id="serviceDesc" class="form-control mb-2" placeholder="Description"></textarea>
+        <button type="submit" class="btn btn-warning">Add Service</button>
+      </form>
+      <ul id="serviceList" class="list-group"></ul>
+    </div>
   </div>
 
   <footer class="bg-dark text-white text-center py-3">
